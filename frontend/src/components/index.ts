@@ -6,3 +6,5 @@ export {HeaderContainer} from './header';
 export {FeatureContainer} from './feature';
 export {ProfileContainer} from './profile';
 export {LoadingContainer} from './loading';
+export {CardContainer} from './card';
+export {PlayerContainer} from './player';

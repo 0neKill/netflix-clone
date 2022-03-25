@@ -3,6 +3,7 @@ import {ROUTES} from "../../../constants/routes";
 export interface IProps {
     bg?: boolean,
     src?: string,
+    dontShowOnSmallViewPort?: boolean,
 }
 
 export interface IRoutes {
@@ -14,6 +15,22 @@ export interface ILogo extends IRoutes {
     src: string
 }
 
-export interface IStyles  {
-    src?:string,
+export type IPicture = Pick<ILogo, 'src'>
+
+export interface IStyles {
+    src?: string,
+    dontShowOnSmallViewPort?: boolean,
+}
+
+export interface ISearch {
+    searchTerm: string,
+    handlerChangeSearchTerm: (value: string) => void,
+}
+
+export interface ISearchInput {
+    active: boolean,
+}
+
+export interface ITextLink {
+    active?: boolean,
 }

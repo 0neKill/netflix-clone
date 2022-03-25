@@ -38,16 +38,16 @@ According.Item = function AccordingItem({children}: React.PropsWithChildren<unkn
 
 According.Header = function AccordingHeader({children, id}: React.PropsWithChildren<{ id: number }>) {
     const {handlerSetToggle, selectedItem} = React.useContext(ToggleContext);
-    return <Header onClick={handlerSetToggle.bind(this, id)}>
+    return <Header onClick={handlerSetToggle.bind(this, id)} data-testid='header-test'>
         {children}
         {
             selectedItem === id ?
-                <img src='/images/icons/close-slim.png' alt='Close'/> :
-                <img src='/images/icons/add.png' alt='Open'/>
+                <img src='/images/icons/close-slim.png' alt='Close' data-testid='close-test'/> :
+                <img src='/images/icons/add.png' alt='Open' data-testid='open-test'/>
         }
     </Header>
 }
 According.Body = function AccordingBody({children, id}: React.PropsWithChildren<{ id: number }>) {
     const {selectedItem} = React.useContext(ToggleContext);
-    return selectedItem === id ? <Body>{children}</Body> : null;
+    return selectedItem === id ? <Body data-testid='body-test' >{children}</Body> : null;
 }

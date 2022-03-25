@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player component render the Player component 1`] = `
+<div>
+  <div
+    class="sc-faUpoM"
+  >
+    <button
+      class="sc-TBWPX jkvZCf"
+    >
+      Play
+    </button>
+  </div>
+</div>
+`;

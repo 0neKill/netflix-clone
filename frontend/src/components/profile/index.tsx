@@ -7,7 +7,7 @@ import Profiles from "./components";
 export const ProfileContainer: React.FunctionComponent = () => {
     return (
         <>
-            <Header>
+            <Header bg={false}>
                 <Header.Frame>
                     <Header.Logo to={ROUTES.HOME} src={logo} alt='Netflix logo'/>
                 </Header.Frame>
